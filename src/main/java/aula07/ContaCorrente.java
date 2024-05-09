@@ -19,4 +19,9 @@ public class ContaCorrente extends ContaBancaria {
     public void processar(){
         this.sacar(tarifa);
     }
+
+
+    public String getInformacoes(){
+        return "CC: " + super.getInformacoes() + " Tarifa: R$ " + this.tarifa;
+    }
 }

@@ -22,4 +22,8 @@ public class ContaPoupanca extends ContaBancaria {
         double valorDoRendimento = this.getSaldo() * rendimento / 100;
         this.depositar(valorDoRendimento);
     }
+
+    public String getInformacoes(){
+        return "CP: " + super.getInformacoes() + " Rendimento: " + this.rendimento + "%";
+    }
 }
