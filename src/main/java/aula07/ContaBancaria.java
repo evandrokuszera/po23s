@@ -1,6 +1,6 @@
 package aula07;
 
-public class ContaBancaria {
+public abstract class ContaBancaria {
     private int numero;
     private String titular;
     private double saldo;
@@ -10,6 +10,8 @@ public class ContaBancaria {
         this.titular = titular;
         this.saldo = saldo;
     }
+
+    public abstract void processar();
 
     public void sacar(double valor){
         if (valor < 0){

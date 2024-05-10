@@ -6,7 +6,7 @@ import aula07.ContaPoupanca;
 
 public class Prog1 {
     public static void main(String[] args) {
-        ContaBancaria conta1 = new ContaBancaria(1,"Ana", 4000.0);
+        ContaBancaria conta1 = new ContaCorrente(1,"Ana", 4000.0, 25);
         System.out.println( conta1.getInformacoes() );
 
         ContaCorrente conta2 = new ContaCorrente(2,"Rui", 1000.0, 25.0);

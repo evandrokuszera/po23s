@@ -16,6 +16,7 @@ public class ContaCorrente extends ContaBancaria {
         this.tarifa = tarifa;
     }
 
+    @Override
     public void processar(){
         this.sacar(tarifa);
     }
