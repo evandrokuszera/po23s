@@ -1,4 +1,4 @@
-package aula091;
+package aula09b;
 
 public class Funcionario {
 }

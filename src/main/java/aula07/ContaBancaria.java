@@ -1,5 +1,7 @@
 package aula07;
 
+import aula10.SaldoInsuficienteException;
+
 public abstract class ContaBancaria {
     private int numero;
     private String titular;
@@ -13,15 +15,21 @@ public abstract class ContaBancaria {
 
     public abstract void processar();
 
-    public void sacar(double valor){
+    public void sacar(double valor) throws SaldoInsuficienteException {
         if (valor < 0){
-            System.out.println("Sacar: impossível sacar valor negativo.");
-            return;
+            throw new IllegalArgumentException("Erro: impossível sacar valor negativo.");
+        }
+        double tempSaldo = this.saldo - valor;
+        if (tempSaldo < 0){
+            throw new SaldoInsuficienteException("Erro: saldo insuficiente para realizar o saque.");
         }
         this.saldo = this.saldo - valor;
     }
 
     public void depositar(double valor){
+        if (valor < 0){
+            throw new IllegalArgumentException("Erro: impossível depositar valor negativo.");
+        }
         this.saldo = this.saldo + valor;
     }
 

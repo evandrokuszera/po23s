@@ -1,11 +1,12 @@
-package aula091;
+package aula09b;
 
-public class Gerente extends Funcionario implements Usuario {
+public class Empresa extends Cliente implements Usuario{
+
     private String nome;
     private String login;
     private String password;
 
-    public Gerente(String login, String password) {
+    public Empresa(String login, String password) {
         this.login = login;
         this.password = password;
     }
@@ -29,4 +30,6 @@ public class Gerente extends Funcionario implements Usuario {
     public void setPassword(String password) {
         this.password = password;
     }
+
+
 }

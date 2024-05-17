@@ -1,5 +1,7 @@
 package aula07;
 
+import aula10.SaldoInsuficienteException;
+
 public class ContaCorrente extends ContaBancaria {
     private double tarifa;
 
@@ -17,8 +19,12 @@ public class ContaCorrente extends ContaBancaria {
     }
 
     @Override
-    public void processar(){
-        this.sacar(tarifa);
+    public void processar() {
+        try {
+            this.sacar(tarifa);
+        } catch (SaldoInsuficienteException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 

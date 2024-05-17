@@ -1,7 +1,9 @@
 package aula07;
 
+import aula10.SaldoInsuficienteException;
+
 public class Prog2 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SaldoInsuficienteException {
         ContaCorrente conta3 = new ContaCorrente(3, "Rui", 1000, 25);
         ContaPoupanca conta4 = new ContaPoupanca(4, "Ivo", 1000, 10);
 
